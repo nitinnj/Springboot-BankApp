@@ -8,13 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
-            steps {
-                git branch: 'DevOps',
-                url: 'git@github.com:nitinnj/Springboot-BankApp.git'
-            }
-        }
-
         stage('Build Jar') {
             steps {
                 sh 'mvn clean package -DskipTests'
